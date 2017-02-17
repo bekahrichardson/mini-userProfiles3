@@ -6,7 +6,8 @@ angular.module('userProfiles').service('mainService', function($http, $q) {
         method: 'GET',
         url: 'http://reqres.in/api/users?page=1'
     }).then(function(response) {
-      deferred.resolve(response)
+      var parsedResponse = response.data.data
+      deferred.resolve(parsedResponse)
     })
     return deferred.promise;
   }
