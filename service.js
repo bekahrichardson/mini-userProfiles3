@@ -1,4 +1,4 @@
-angular.module('userProfiles').service('mainService', function($http) {
+angular.module('userProfiles').service('mainService', function($http, $q) {
 
   this.getUsers = function() {
     return $http({
